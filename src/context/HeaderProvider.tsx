@@ -1,13 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import HeaderContext from "./HeaderContext";
 
-const HeaderProvider = (props: any) => {
+interface HeaderProviderProps {
+  children: ReactNode;
+}
+
+const HeaderProvider = ({children}: HeaderProviderProps) => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <HeaderContext.Provider value={{ menuOpen, setMenuOpen }}>
-            {props.children}
+            {children}
         </HeaderContext.Provider>
     )
 }
