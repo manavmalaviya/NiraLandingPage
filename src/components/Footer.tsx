@@ -13,6 +13,15 @@ export default function Footer() {
                     <div className="text-xl">
                         NIRA
                     </div>
+                    <div className="text-sm text-gray-800 font-secondary">
+                        B/809, RJD BUSINESS HUB,
+                        <br />
+                        KATARGAM, SURAT - 395004
+                        <br />
+                        <p className="py-1.5">
+                            9510029766 / 8799030345
+                        </p>
+                    </div>
                     <div className="text-sm font-secondary text-gray-500 ">
                         Crafting Timeless Elegance since 2020.
                     </div>
@@ -35,13 +44,13 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col text-sm font-secondary text-gray-500 gap-2">
                         <MenuItems animation={false} link="/about" text="About Us" />
-                        <MenuItems animation={false} link="/contact" text="Contact Us" />
+                        <MenuItems animation={false} link="/contact-us" text="Contact Us" />
                         <MenuItems animation={false} link="/faq" text="FAQ" />
                         <MenuItems animation={false} link="/shipping-and-returns" text="Shipping & Returns" />
                     </div>
                 </div>
                 <div className="font-secondary flex flex-col gap-3 text-sm">
-                    <div >
+                    <div>
                         NEWSLETTER
                     </div>
                     <div className="flex flex-col text-sm font-secondary text-gray-500 gap-2">
@@ -49,7 +58,7 @@ export default function Footer() {
                             Subscribe to our newsletter for exclusive offers and updates.
                             <div className="flex">
                                 <input type="email" placeholder="Your email" className="border border-transparent px-2 py-1 w-full" style={{ backgroundColor: "var(--primary)" }} />
-                                <button onClick={(e)=> e.preventDefault()} className="cursor-pointer text-white px-4 py-1" style={{ backgroundColor: "var(--secondary)"}}><ArrowRight size={15} className="text-sm" /></button>
+                                <button onClick={(e) => e.preventDefault()} className="cursor-pointer text-white px-4 py-1" style={{ backgroundColor: "var(--secondary)" }}><ArrowRight size={15} className="text-sm" /></button>
                             </div>
                         </div>
                     </div>
