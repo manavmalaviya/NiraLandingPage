@@ -13,15 +13,7 @@ export default function Footer() {
                     <div className="text-xl">
                         NIRA
                     </div>
-                    <div className="text-sm text-gray-800 font-secondary">
-                        B/809, RJD BUSINESS HUB,
-                        <br />
-                        KATARGAM, SURAT - 395004
-                        <br />
-                        <p className="py-1.5">
-                            9510029766 / 8799030345
-                        </p>
-                    </div>
+
                     <div className="text-sm font-secondary text-gray-500 ">
                         Crafting Timeless Elegance since 2020.
                     </div>
@@ -47,6 +39,20 @@ export default function Footer() {
                         <MenuItems animation={false} link="/contact-us" text="Contact Us" />
                         <MenuItems animation={false} link="/faq" text="FAQ" />
                         <MenuItems animation={false} link="/shipping-and-returns" text="Shipping & Returns" />
+                    </div>
+                </div>
+                <div className="font-secondary flex flex-col gap-3 text-sm">
+                    <div >
+                        CONTACT US
+                    </div>
+                    <div className="text-sm text-gray-500 font-secondary">
+                        B/809, RJD BUSINESS HUB,
+                        <br />
+                        KATARGAM, SURAT - 395004
+                        <br />
+                        <p className="py-1.5">
+                            9510029766 / 8799030345
+                        </p>
                     </div>
                 </div>
                 <div className="font-secondary flex flex-col gap-3 text-sm">

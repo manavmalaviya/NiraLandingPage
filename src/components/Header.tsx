@@ -20,7 +20,7 @@ export default function Header() {
             }
             <div className="flex sm:flex-1 justify-center md:justify-start text-2xl font-light auto">
                 <Link href="/">
-                    NIRA
+                    <img src="./nira_new_logo.png" alt="Brand Logo" width={windowSize=="sm"?"50px":"70px"} height="auto" className="logo" loading="lazy" />
                 </Link>
             </div>
             {windowSize == "md" &&

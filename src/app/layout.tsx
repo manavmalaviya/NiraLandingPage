@@ -1,11 +1,11 @@
+
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import HeaderProvider from "@/context/HeaderProvider";
-import MobileHeader from "@/components/MobileHeader";
+
 import Head from "next/head";
+import MainPage from '@/app/main'
 
 const primary_font = Cormorant_Garamond({
   subsets: ['latin'],
@@ -21,8 +21,46 @@ const secondary_font = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Luxury Handcrafted Jewelry | Elegant Rings, Necklaces & More | NIRA",
-  description: "Discover timeless elegance with our handcrafted jewelry collection. Shop stunning rings, pendants, bracelets & earrings made with love and premium materials such as 9K/ 10K/ 14K/ 14K/ 18K/ 22L  Gold, Silver, Platinum. Free shipping & returns.",
+  title: "NIRA Diamond Jewelry | Luxury Engagement Rings & Fine Jewelry",
+  description:
+    "Discover NIRA Diamond Jewelry - exquisite engagement rings, fine diamond necklaces, earrings, and custom designs. Crafted with precision and elegance, our diamonds bring brilliance to every occasion. Shop luxury jewelry online today made with love and premium materials such as 9K/ 10K/ 14K/ 14K/ 18K/ 22K  Gold, Silver, Platinum. Free shipping & returns.",
+  keywords: [
+    "NIRA Diamond Jewelry",
+    "luxury diamond rings",
+    "fine jewelry online",
+    "engagement rings",
+    "diamond necklaces",
+    "custom diamond jewelry",
+    "wedding bands",
+    "gold and diamond earrings",
+    "jewelry store",
+    "high quality diamonds"
+  ],
+  authors: [{ name: "NIRA Diamond Jewelry" }],
+  openGraph: {
+    title: "NIRA Diamond Jewelry | Luxury Engagement Rings & Fine Jewelry",
+    description:
+      "Shop NIRA Diamond Jewelry for luxury engagement rings, wedding bands, necklaces, earrings, and custom pieces. Crafted for brilliance and elegance.",
+    url: "https://niradiamondjewelry.com",
+    siteName: "NIRA Diamond Jewelry",
+    // images: [
+    //   {
+    //     url: "https://niradiamondjewelry.com/og-image.jpg", // Replace with your actual image
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "NIRA Diamond Jewelry"
+    //   }
+    // ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NIRA Diamond Jewelry | Luxury Engagement Rings & Fine Jewelry",
+    description:
+      "Luxury engagement rings, fine necklaces, earrings, and custom diamond jewelry from NIRA.",
+    // images: ["https://niradiamondjewelry.com/og-image.jpg"]
+  }
 };
 
 
@@ -31,9 +69,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" className={`${primary_font.variable} ${secondary_font.variable}  font-sans  antialiased`}>
-       <Head>
+      <Head>
         <link rel="icon" href="/favicon.ico" />
         {/* <link
           rel="icon"
@@ -57,12 +96,7 @@ export default function RootLayout({
       <body>
         <HeaderProvider>
           <div id="scrollable-div" className="flex flex-col scrollable h-screen overflow-y-auto relative">
-            <Header />
-            <MobileHeader />
-            <main>
-                {children}
-            </main>
-            <Footer />
+            <MainPage>{children}</MainPage>
           </div>
         </HeaderProvider>
       </body>
